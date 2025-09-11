@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Color</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            font-size: 2rem;
+            color: white;
+            transition: background-color 0.25s ease;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function getRandomColor() {
+            return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+        }
+
+        function changeBackground() {
+            document.body.style.backgroundColor = getRandomColor();
+        }
+
+        setInterval(changeBackground, 250); // Changes color every 250 ms (4 times per second)
+    </script>
+</body>
+</html>
