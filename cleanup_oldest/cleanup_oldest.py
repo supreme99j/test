@@ -21,6 +21,8 @@ def delete_oldest_file()
 
         if entry == script_name
             continue
+	#if not file.endswith(".deb"):
+        #   continue
 
         try
             mtime = os.path.getmtime(full_path)
